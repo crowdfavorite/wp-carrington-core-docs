@@ -12,17 +12,41 @@ http://www.opensource.org/licenses/gpl-license.php
 ## What is Carrington?
 
 1. A collection of elegant, high-end WordPress themes for end-users.
-2. A designer and developer friendly conventions-based framework for templating.
+2. A designer and developer friendly CMS theme framework for WordPress.
 3. A set of best practices for theme organization.
 
 
 ## Basic Framework Concept
 
-Carrington is an attempt to better abstract WordPress theme organization, and simplify commonly needed theme functionality.
+Carrington is a CMS theme framework that virtually eliminates the need for custom conditional code in themes. Instead, template naming conventions along with the Carrington engine replace the need for this conditional code.
 
-Theme functionality is broken up into thoughtfully crafted abstractions to enable customizations at different levels (the loop, the post/page content, comments, etc.) and a context-aware hierarchical template override system that chooses which template to be used for each segment of the theme.
+Theme functionality is broken up into thoughtfully crafted abstractions to enable customizations at different levels (the loop, the post/page content, comments, etc.) and the Carrington engine chooses which template to be used for each segment of the theme.
 
-The abstractions and supported template types are designed to easily handle most of the customization scenarios we commonly see.
+The abstractions and supported template types are designed to easily handle most of the customization scenarios we commonly see without the need to write custom code to use them.
+
+
+## Context and Templates
+
+WordPress provides a number of functions to help you determine what type of view a theme is showing. These include:
+
+- `is_home()`
+- `is_single()`
+- `is_page()`
+- `is_archive()`
+- `in_category()`
+- etc.
+
+Carrington abstracts these to deduce a "context" that is used when selecting a template. There are three context types used by the Carrington framework:
+
+1. Comment (dirs: comment)
+2. Content (dirs: content, excerpt)
+3. General (dirs: attachment, comments, footer, header, loop, posts, sidebar, single)
+
+Each directory implements one of these contexts for selecting the appropriate template to use. Templates are used in page views based on how they match the given context(s) for the page and content.
+
+Read about the options available in each directory in the README file for that directory.
+
+Note: "default.php" is a supported default file name for all directories, however we have found in real world usage that {dirname}-default.php is a preferable naming system. When you have a half-dozen "defaultphp" files open in your favorite text editor, telling them apart in the file list can be more difficult than it should be.
 
 
 ## Theme Organization
@@ -50,32 +74,6 @@ Template files are layered into each other using the following basic approach:
 5. comments area template that includes 
 6. atomic template for comments and a 
 7. template for the comment form
-
-
-## Context and Templates
-
-WordPress provides a number of functions to help you determine what type of view a theme is showing. These include:
-
-- `is_home()`
-- `is_single()`
-- `is_page()`
-- `is_archive()`
-- `in_category()`
-- etc.
-
-Carrington abstracts these to deduce a "context" for a particular page.
-
-There are three main contexts:
-
-1. Comment (dirs: comment)
-2. Content (dirs: content, excerpt)
-3. General (dirs: attachment, comments, footer, header, loop, posts, sidebar, single)
-
-Each directory implements one of these contexts for selecting a the appropriate template to use. Read about the options available in each directory in the README file for that directory.
-
-At each level, templates are chosen based on a built-in context selection system that uses simple file naming conventions to provide default functionality that allows for easy display customization based on various criteria.
-
-Note: "default.php" is a supported default file name for all directories, however we have found in real world usage that {dirname}-default.php is a preferable naming system. When you have a half-dozen "defaultphp" files open in your favorite text editor, telling them apart in the file list can be more difficult than it should be.
 
 
 ## Actions and Filters
@@ -118,7 +116,7 @@ Because Carrington is as much a theme framework as a theme itself, it includes a
 
 ## Plugins
 
-Any .php files in the *plugins/* directory will be automatically loaded by Carrington. This is a great way to bundle in custom functions or to hook into Carrington's actions or filters.
+Any .php files in the *plugins/* directory will be automatically loaded by Carrington. This is a great way to bundle in custom functions or to hook into Carrington's actions or filters and be able to distribute everything as a single theme package.
 
 ---
 
