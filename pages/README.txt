@@ -1,7 +1,5 @@
 ## pages/
 
-### Overview
-
 WP doesn't support page templates in nested folders like this one, so page organization isn't as clean as we'd like.
 
 Create a page in the theme root:
@@ -30,7 +28,7 @@ This will then load 'example.php' from the _pages/_ directory, keeping all of yo
 You can also add your page code to the page-example.php file you create in the theme root, but we're hoping to get support for pages in a sub-directory in a future version of WordPress so we are starting with what we consider to be a "proper" organization structure now.
 
 
-### Supported Override Filenames
+### Supported Filenames
 
 - pages-default.php (or default.php)
 
