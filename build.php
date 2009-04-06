@@ -19,7 +19,7 @@
 // svn export https://carrington.googlecode.com/svn/jam/trunk carrington-jam-1.1
 // svn export https://carrington.googlecode.com/svn/mobile/trunk carrington-mobile-1.0
 
-define('THEME_PATH', '/tmp/jam/trunk/');
+define('THEME_PATH', '/Users/aking/Sites/src/carrington/text/carrington-text/'); // include trailing slash
 define('ROOT_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/');
 
 header('Content-type: text/plain');
@@ -60,7 +60,7 @@ if ($handle = opendir($path)) {
 
 if ($handle = opendir(ROOT_PATH)) {
 	while (false !== ($dir = readdir($handle))) {
-		if (is_dir(ROOT_PATH.$dir)) {
+		if ($dir != '..' && is_dir(ROOT_PATH.$dir) && is_dir(THEME_PATH.$dir)) {
 			if (cfct_write_readme($dir)) {
 				echo 'Wrote README to: '.THEME_PATH.$dir."/README.txt\n";
 			}
