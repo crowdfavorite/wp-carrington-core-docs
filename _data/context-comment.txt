@@ -18,7 +18,7 @@ however this order can be overridden with a plugin using the `cfct_comment_match
 Once a template match has been found, no other processing is done.
 
 
-### Supported Templates
+### Supported Templates (Comment Context)
 
 - *comment-default.php* - Used when there are no other templates that match for a given comment.
 - *ping.php* - Used if the comment is a pingback or a trackback.

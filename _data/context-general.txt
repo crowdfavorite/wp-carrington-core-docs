@@ -19,7 +19,7 @@ By default, conditions are checked in this order:
 This can be altered using the `cfct_general_match_order` hook.
 
 
-### Supported Templates
+### Supported Templates (General Context)
 
 - *{dirname}-default.php* (or default.php) - Used when there are no other templates that match for a given page/post.
 - *archive.php* - Used for date archives or if there are no specific category, author or tag templates.

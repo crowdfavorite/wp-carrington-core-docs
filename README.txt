@@ -39,14 +39,14 @@ WordPress provides a number of functions to help you determine what type of view
 Carrington abstracts these to deduce a "context" that is used when selecting a template. There are three context types used by the Carrington framework:
 
 1. Comment (dirs: comment)
-2. Content (dirs: content, excerpt)
+2. Post (dirs: content, excerpt)
 3. General (dirs: attachment, comments, footer, header, loop, posts, sidebar, single)
 
-Each directory implements one of these contexts for selecting the appropriate template to use. Templates are used in page views based on how they match the given context(s) for the page and content.
+Each directory implements one of these contexts for selecting the appropriate template to use. Templates are used in page views based on how they match the given context(s) for the overall page and the specific pieces of content being displayed.
 
 Read about the options available in each directory in the README file for that directory.
 
-Note: "default.php" is a supported default file name for all directories, however we have found in real world usage that {dirname}-default.php is a preferable naming system. When you have a half-dozen "defaultphp" files open in your favorite text editor, telling them apart in the file list can be more difficult than it should be.
+Note: "default.php" is a supported default file name for all directories, however we have found in real world usage that {dirname}-default.php is a preferable naming system. When you have a half-dozen "default.php" files open in your favorite text editor, telling them apart in the file list can be more difficult than it should be.
 
 
 ## Theme Organization
@@ -78,7 +78,7 @@ Template files are layered into each other using the following basic approach:
 
 ## Actions and Filters
 
-Because Carrington is as much a theme framework as a theme itself, it includes a core set of functions that enable the override template hierarchy. These functions include actions and filters where appropriate so that their functionality can be customized and overridden as needed. These actions and filters use the same hook and filter system used in the WordPress core.
+The Carrington core is a theme framework, not a parent/child theme system. It includes a core set of functions that enable the override template hierarchy. These functions include actions and filters where appropriate so that their functionality can be customized and overridden as needed. These actions and filters use the same hook and filter system used in the WordPress core.
 
 
 ### Filters
@@ -122,4 +122,4 @@ Any .php files in the *plugins/* directory will be automatically loaded by Carri
 
 ## Tips
 
-There is extra processing associated with the file system and context checks that Carrington requires. Because of this, use of a caching plugin is recommended.
+There is very minor extra processing associated with the file system and context checks that Carrington requires. This overhead is virtually unnoticeable, however the use of a caching plugin is recommended as a general best practice.

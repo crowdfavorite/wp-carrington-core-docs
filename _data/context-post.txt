@@ -1,4 +1,8 @@
 
+## Post Context
+
+When choosing a template to use in the Post Context, the Carrington engine looks information (author, category, tags, custom fields, etc.) related to the post/page being shown.
+
 Commonly these templates are included by templates in the _loop/_; but are also useful for bringing in an atomic post representation via AJAX or placing one within another template.
 
 A "default" template is required, and will be used when there are no other templates that match a given comment. This could be because no other templates have been created, or because the comment in question doesn't match the templates that are available.
@@ -20,7 +24,7 @@ however this order can be overridden with a plugin using the `cfct_single_match_
 Once a template match has been found, no other processing is done.
 
 
-### Supported Templates
+### Supported Templates (Post Context)
 
 - *{dirname}-default.php* - Used when there are no other templates that match for a given post/page.
 - *author-{username}.php* - Used when a user with that username authors a post/page. For example, a template with a file name of _author-jsmith.php_ would be used for a poat/page by user _jsmith_. Any WordPres username can take the place of {username} in the file name.
