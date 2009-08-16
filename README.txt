@@ -9,6 +9,13 @@ http://www.opensource.org/licenses/gpl-license.php
 
 ---
 
+## Online Developer Resources
+
+Please see the latest online developer resources for Carrington here:
+
+http://carringtontheme.com/developers/
+
+
 ## What is Carrington?
 
 1. A collection of elegant, high-end WordPress themes for end-users.
