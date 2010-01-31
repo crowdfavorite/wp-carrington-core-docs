@@ -19,7 +19,7 @@
 // svn export https://carrington.googlecode.com/svn/jam/trunk carrington-jam-1.1
 // svn export https://carrington.googlecode.com/svn/mobile/trunk carrington-mobile-1.0
 
-define('THEME_PATH', '/Users/aking/Sites/src/carrington/blog/tags/carrington-blog-2.2/'); // include trailing slash
+define('THEME_PATH', '/Users/aking/Sites/src/carrington/jam/tags/carrington-jam-1.3/'); // include trailing slash
 define('ROOT_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/');
 
 header('Content-type: text/plain');
