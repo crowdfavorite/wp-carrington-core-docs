@@ -14,10 +14,11 @@ The order in which these conditions are checked defaults to the following:
 1. author
 2. meta
 3. category
-4. role
-5. tag
-6. parent
-7. default
+4. type
+5. role
+6. tag
+7. parent
+8. default
 
 however this order can be overridden with a plugin using the `cfct_single_match_order` hook.
 
@@ -29,6 +30,7 @@ Once a template match has been found, no other processing is done.
 - *{dirname}-default.php* - Used when there are no other templates that match for a given post/page.
 - *author-{username}.php* - Used when a user with that username authors a post/page. For example, a template with a file name of <code>author-jsmith.php</code> would be used for a poat/page by user <code>jsmith</code>. Any WordPres username can take the place of {username} in the file name.
 - *cat-{slug}.php* - Used when a post is in a given category. The category is matched by the "slug" - for example a post in category "General" (with a category slug of "general") could use a template of <code>cat-general.php</code>.
+- *type-{post_type}.php* - Used when a post belongs to a specific custom post type.  The type is matched by the "post_type" property of the post.  For example if you had a custom post type of <code>news</code>, you could use a template with the name <code>type-news.php</code>.
 - *meta-{key}.php* - Used when there is a custom field for the post/page matching the key listed in the file name. This is useful if you want to be able to flag posts as "photo" or similar, and give those posts some custom treatment. In this example, you could add a custom field of "photo" with a value of the URL of the image to a post/page and it would use a template of <code>meta-photo.php</code> if that template exists. The value does not matter in this match.
 - *meta-{key}-{value}.php* - Used when there is a custom field for the post/page matching the key and value listed in the file name. This is useful if you want to be able to flag posts as "featured" or similar, and give those posts some custom treatment. In this example, you could add a custom field of "featured" with a value of "yes" to a post/page and it would use a template of <code>meta-featured-yes.php</code> if that template exists.
 - *page.php* - Used when the content is being displayed is a page (not a post).
