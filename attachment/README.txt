@@ -1,4 +1,4 @@
-## image/
+## attachment/
 
 This directory holds templates for images/attachments.
 
