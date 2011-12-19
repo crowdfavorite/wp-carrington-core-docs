@@ -25,7 +25,7 @@ This can be altered using the `cfct_general_match_order` hook.
 - *archive.php* - Used for date archives or if there are no specific category, author or tag templates.
 - *author.php* - Used for author archive lists.
 - *author-{username}.php* - Used when the post/page is authored by a specific user. For example, a template with a file name of _author-jsmith.php_ would be used for a post/page by user _jsmith_. Any WordPress username can take the place of {username} in the file name.
-- *role-{rolename}.php - Used when the post author has a particular role. This might be the role of _contributor_, _author_, _editor_, etc. and use a file of _role-contributor.php_, _role_author.php_, etc. where the role name takes the place of the {rolename} in the file name.
+- *role-{rolename}.php - Used when the post author has a particular role. This might be the role of _contributor_, _author_, _editor_, etc. and use a file of _role-contributor.php_, _role-author.php_, etc. where the role name takes the place of the {rolename} in the file name.
 - *category.php* - Used for category archive lists.
 - *cat-{slug}.php* - Used fr displaying a given category. The category is matched by the "slug" - for example a post in category "General" (with a category slug of "general") could use a template of _cat-general.php_.
 - *home.php* - Used when on the home page.
