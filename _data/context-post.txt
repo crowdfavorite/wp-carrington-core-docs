@@ -24,6 +24,8 @@ The order in which these conditions are checked defaults to the following:
 
 however this order can be overridden with a plugin using the `cfct_single_match_order` hook.
 
+Support for Carrington templates in feeds (RSS, Atom) was added in version 3.3. To use this, prefix any of the Post Context filenames with "feed-", and those templates will be used exclusively in RSS and Atom feeds.
+
 Once a template match has been found, no other processing is done.
 
 
