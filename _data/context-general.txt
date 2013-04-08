@@ -32,6 +32,7 @@ This can be altered using the `cfct_general_match_order` hook.
 - *tag-{slug}.php* - Used for displaying the archives of a given tag. The tag is matched by the "slug" - for example a post in tag "News" (with a tag slug of "news") could use a template of _tag-news.php_.
 - *tag.php* - Used for tag archives.
 - *type-{type}.php* - Used to target a given custom post type. Replace {type} with the custom post type's WordPress reference.
+- *role-{rolename}.php - Used on the post archives of a author when they have a particular role. This might be the role of _contributor_, _author_, _editor_, etc. and use a file of _role-contributor.php_, _role-author.php_, etc. where the role name takes the place of the {rolename} in the file name.
 - *single-{post context filenames}.php* - Templates used for single posts.
 -- *single-author-{author}.php* - Used to target a post by a given author.
 -- *single-meta-{key}-{value}.php* - Used when there is a custom field for the post/page matching the key and value listed in the file name.
@@ -40,7 +41,7 @@ This can be altered using the `cfct_general_match_order` hook.
 -- *single-cat-{slug}.php* - Used to target a post in a given category.
 -- *single-tax-{taxonomy}-{term}.php* - Used to target a post with a given term within a specific taxonomy. 
 -- *single-type-{type}.php* - Used to display the custom content for a given post type.
--- *single-role-{rolename}.php* - Used when a post/page is authored by a user with a particular role. The {role} is an all lowercase representation of the role string - for example, an author with an "Administrator" role might use a template of <code>role-administrator.php</code>. This is primarily useful if you have a set of authors that are given a Contributor role; or a Guest Columnist role or similar. Any WordPress role can take the place of {role} in the file name.
+-- *single-role-{rolename}.php* - Used to display single posts written by an author with a given WordPress role. This might be the role of _contributor_, _author_, _editor_, etc. and use a file of _role-contributor.php_, _role-author.php_, etc. where the role name takes the place of the {rolename} in the file name.
 -- *single-tag-{tag}.php* - Used for displaying custom content for a single post containing a given tag.
 -- *single-parent-{slug}.php - For single posts with a given parent's slug.
 -- *single.php* - Used for single posts.
@@ -50,7 +51,3 @@ This can be altered using the `cfct_general_match_order` hook.
 - *home.php* - Used when on the home page.
 - *page.php* - Used for pages that do not match any other contextual templates.		
 - *{dirname}-default.php* (or default.php) - Used when there are no other templates that match for a given page/post.
-
-
-
-QA - 
