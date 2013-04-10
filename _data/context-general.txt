@@ -34,17 +34,17 @@ This can be altered using the `cfct_general_match_order` hook.
 - *type-{type}.php* - Used to target a given custom post type. Replace {type} with the custom post type's WordPress reference.
 - *role-{rolename}.php - Used on the post archives of a author when they have a particular role. This might be the role of _contributor_, _author_, _editor_, etc. and use a file of _role-contributor.php_, _role-author.php_, etc. where the role name takes the place of the {rolename} in the file name.
 - *single-{post context filenames}.php* - Templates used for single posts.
--- *single-author-{author}.php* - Used to target a post by a given author.
--- *single-meta-{key}-{value}.php* - Used when there is a custom field for the post/page matching the key and value listed in the file name.
--- *single-meta-{key}.php* - Used when there is a custom field for the post matching just the key listed in the file name.
--- *single-format-{format}.php* - The format is matched by the "slug" - the lowercase version of the string in this situation ("video", "status", "link", etc.). Your theme must enable post formats to use this feature.
--- *single-cat-{slug}.php* - Used to target a post in a given category.
--- *single-tax-{taxonomy}-{term}.php* - Used to target a post with a given term within a specific taxonomy. 
--- *single-type-{type}.php* - Used to display the custom content for a given post type.
--- *single-role-{rolename}.php* - Used to display single posts written by an author with a given WordPress role. This might be the role of _contributor_, _author_, _editor_, etc. and use a file of _role-contributor.php_, _role-author.php_, etc. where the role name takes the place of the {rolename} in the file name.
--- *single-tag-{tag}.php* - Used for displaying custom content for a single post containing a given tag.
--- *single-parent-{slug}.php - For single posts with a given parent's slug.
--- *single.php* - Used for single posts.
+	- *single-author-{author}.php* - Used to target a post by a given author.
+	- *single-meta-{key}-{value}.php* - Used when there is a custom field for the post/page matching the key and value listed in the file name.
+	- *single-meta-{key}.php* - Used when there is a custom field for the post matching just the key listed in the file name.
+	- *single-format-{format}.php* - The format is matched by the "slug" - the lowercase version of the string in this situation ("video", "status", "link", etc.). Your theme must enable post formats to use this feature.
+	- *single-cat-{slug}.php* - Used to target a post in a given category.
+	- *single-tax-{taxonomy}-{term}.php* - Used to target a post with a given term within a specific taxonomy. 
+	- *single-type-{type}.php* - Used to display the custom content for a given post type.
+	- *single-role-{rolename}.php* - Used to display single posts written by an author with a given WordPress role. This might be the role of _contributor_, _author_, _editor_, etc. and use a file of _role-contributor.php_, _role-author.php_, etc. where the role name takes the place of the {rolename} in the file name.
+	- *single-tag-{tag}.php* - Used for displaying custom content for a single post containing a given tag.
+	- *single-parent-{slug}.php - For single posts with a given parent's slug.
+	- *single.php* - Used for single posts.
 - *archive.php* - Used for date archives or if there are no specific category, author, taxonomy or tag templates.
 - *search.php* - Used when displaying search results.
 - *404.php* - Used when displaying search results.

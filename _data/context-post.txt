@@ -48,14 +48,14 @@ Once a template match has been found, no other processing is done.
 If you wish to customize the output displayed in your feeds, you can create templates using the naming conventions above and prefix them with "feed-". These will only take effect in your feeds.
 
 - *feed-{post context filenames}.php*
--- *feed-author-{author}.php*
--- *feed-meta-{key}-{value}.php*
--- *feed-meta-{key}.php*
--- *feed-format-{format}.php*
--- *feed-cat-{slug}.php*
--- *feed-tax-{taxonomy}-{term}.php*
--- *feed-type-{type}.php*
--- *feed-role-{role}.php*
--- *feed-tag-{tag}.php*
--- *feed-parent-{slug}.php*
--- *feed.php*
+	- *feed-author-{author}.php*
+	- *feed-meta-{key}-{value}.php*
+	- *feed-meta-{key}.php*
+	- *feed-format-{format}.php*
+	- *feed-cat-{slug}.php*
+	- *feed-tax-{taxonomy}-{term}.php*
+	- *feed-type-{type}.php*
+	- *feed-role-{role}.php*
+	- *feed-tag-{tag}.php*
+	- *feed-parent-{slug}.php*
+	- *feed.php*
