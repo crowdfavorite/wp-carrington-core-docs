@@ -1,5 +1,4 @@
-# Carrington CMS Theme Framework for WordPress
-http://carringtontheme.com
+# Carrington Core for WordPress Themes
 
 by Crowd Favorite  
 http://crowdfavorite.com
@@ -9,18 +8,9 @@ http://www.opensource.org/licenses/gpl-license.php
 
 ---
 
-## Online Developer Resources
+## What is Carrington Core?
 
-Please see the latest online developer resources for Carrington here:
-
-http://carringtontheme.com/developers/
-
-
-## What is Carrington?
-
-1. A collection of elegant, high-end WordPress themes for end-users.
-2. A designer and developer friendly CMS theme framework for WordPress.
-3. A set of best practices for theme organization.
+A set of template heuristics and best practices for building maintainable themes for WordPress websites.
 
 
 ## Basic Framework Concept
