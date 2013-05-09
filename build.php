@@ -19,7 +19,18 @@
 // svn export https://carrington.googlecode.com/svn/jam/trunk carrington-jam-1.1
 // svn export https://carrington.googlecode.com/svn/mobile/trunk carrington-mobile-1.0
 
-define('THEME_PATH', '/Users/aking/Sites/src/carrington/jam/tags/carrington-jam-1.4/'); // include trailing slash
+if (isset($argv[1]) && is_dir($argv[1])) {
+	$dir = $argv[1];
+	if (substr($dir, -1) !== '/') {
+		$dir = $dir . '/';
+	}
+
+	define('THEME_PATH', $dir); // include trailing slash
+}
+else {
+	die('Usage: php build.php path/to/theme/');
+}
+#define('THEME_PATH', '/Users/devesine/Desktop/favebusiness/'); // include trailing slash
 define('ROOT_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/');
 
 header('Content-type: text/plain');
@@ -33,7 +44,12 @@ function cfct_write_readme($dir = '') {
 		global $_template_keys, $_template_content;
 		$content = file_get_contents($source);
 		$content = str_replace($_template_keys, $_template_content, $content);
-		$fp = fopen(THEME_PATH.$dir.'README.txt', 'w');
+		if ('./' === $dir && file_exists(THEME_PATH.'carrington-core/README.txt')) {
+			$fp = fopen(THEME_PATH.'carrington-core/README.txt', 'w');
+		}
+		else {
+			$fp = fopen(THEME_PATH.$dir.'README.txt', 'w');
+		}
 		if ($fp) {
 			return fwrite($fp, $content);
 		}
@@ -68,4 +84,3 @@ if ($handle = opendir(ROOT_PATH)) {
 	}
 }
 
-?>
